@@ -35,6 +35,19 @@ public class MainSceneController {
             }
         }
         trText.setText(trText.getText() + "\n" + arrayString.toString());
+        
+        // Пузырьковая сортировка массива
+        BubbleSort.bubbleSort(array);
+        StringBuilder sortedArrayString = new StringBuilder("Отсортированный массив: ");
+        for (int i = 0; i < array.length; i++) {
+            sortedArrayString.append(array[i]);
+            if (i != array.length - 1) {
+                sortedArrayString.append(", ");
+            }
+        }
+        trText.setText(trText.getText() + "\n" + sortedArrayString.toString());
+        
+        
 		
 	}
 	 private int[] generateRandomNumbers() {
@@ -59,6 +72,21 @@ public class MainSceneController {
 	            array[i] = RandomNumberGenerator.generateRandomNumber();
 	        }
 	        return array;
+	    }
+	}
+	
+	public class BubbleSort {
+	    public static void bubbleSort(int[] array) {
+	        int n = array.length;
+	        for (int i = 0; i < n - 1; i++) {
+	            for (int j = 0; j < n - i - 1; j++) {
+	                if (array[j] > array[j + 1]) {
+	                    int temp = array[j];
+	                    array[j] = array[j + 1];
+	                    array[j + 1] = temp;
+	                }
+	            }
+	        }
 	    }
 	}
 	
