@@ -47,7 +47,9 @@ public class MainSceneController {
         }
         trText.setText(trText.getText() + "\n" + sortedArrayString.toString());
         
-        
+        // Вычитание наименьшего элемента из наибольшего
+        int subtractResult = ArrayOperations.subtractMinMax(array);
+        trText.setText(trText.getText() + "\nВычитание наименьшего элемента из наибольшего: " + subtractResult);
 		
 	}
 	 private int[] generateRandomNumbers() {
@@ -89,6 +91,23 @@ public class MainSceneController {
 	        }
 	    }
 	}
+	
+	public class ArrayOperations {
+	    public static int subtractMinMax(int[] array) {
+	        int min = array[0];
+	        int max = array[0];
+	        for (int i = 1; i < array.length; i++) {
+	            if (array[i] < min) {
+	                min = array[i];
+	            }
+	            if (array[i] > max) {
+	                max = array[i];
+	            }
+	        }
+	        return max - min;
+	    }
+	}
+	
 	
 	
 }
