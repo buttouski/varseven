@@ -25,7 +25,16 @@ public class MainSceneController {
         }
         trText.setText(randomNumberString.toString());
 
-     
+        // Создание массива из случайных чисел
+        int[] array = randomNumbers.clone();
+        StringBuilder arrayString = new StringBuilder("Массив: ");
+        for (int i = 0; i < array.length; i++) {
+            arrayString.append(array[i]);
+            if (i != array.length - 1) {
+                arrayString.append(", ");
+            }
+        }
+        trText.setText(trText.getText() + "\n" + arrayString.toString());
 		
 	}
 	 private int[] generateRandomNumbers() {
@@ -43,7 +52,15 @@ public class MainSceneController {
 	        return random.nextInt(401) + 100;
 	    }
 	}
-	
+	public class ArrayGenerator {
+	    public static int[] generateRandomArray() {
+	        int[] array = new int[11];
+	        for (int i = 0; i < array.length; i++) {
+	            array[i] = RandomNumberGenerator.generateRandomNumber();
+	        }
+	        return array;
+	    }
+	}
 	
 	
 }
