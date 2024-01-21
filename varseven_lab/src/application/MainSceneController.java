@@ -50,6 +50,10 @@ public class MainSceneController {
         // Вычитание наименьшего элемента из наибольшего
         int subtractResult = ArrayOperations.subtractMinMax(array);
         trText.setText(trText.getText() + "\nВычитание наименьшего элемента из наибольшего: " + subtractResult);
+        
+        // Нахождение квадратного корня из числа
+        double squareRootResult = MathOperations.squareRoot(subtractResult);
+        trText.setText(trText.getText() + "\nКвадратный корень из числа: " + squareRootResult);
 		
 	}
 	 private int[] generateRandomNumbers() {
@@ -108,6 +112,10 @@ public class MainSceneController {
 	    }
 	}
 	
-	
+	public class MathOperations {
+	    public static double squareRoot(int number) {
+	        return Math.sqrt(number);
+	    }
+	}
 	
 }
