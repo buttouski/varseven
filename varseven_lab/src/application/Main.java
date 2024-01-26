@@ -12,13 +12,13 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/application/MainScene.fxml"));
 			Scene scene = new Scene(root);
 			
 //			BorderPane root = new BorderPane();
 //			Scene scene = new Scene(root,400,400);
 //			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setTitle("Varseven TEAM present");
+			primaryStage.setTitle("Varseven TEAM");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
