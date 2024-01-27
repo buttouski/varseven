@@ -23,13 +23,28 @@
       </resource>
     </resources>
     <plugins>
-      <plugin>
+    <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
           <release>21</release>
         </configuration>
       </plugin>
+      
+		<plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-jar-plugin</artifactId>
+		  <version>3.2.0</version>
+		  <configuration>
+		    <archive>
+		      <manifest>
+		        <addClasspath>true</addClasspath>
+		        <mainClass>application.Main</mainClass> <!-- Замените com.example.MainClass на путь к Вашему основному классу -->
+		      </manifest>
+		    </archive>
+		  </configuration>
+		</plugin>
+     
     </plugins>
   </build>
 </project>
