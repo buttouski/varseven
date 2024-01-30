@@ -40,7 +40,7 @@
 		    <archive>
 		      <manifest>
 		        <addClasspath>true</addClasspath>
-		        <mainClass>application.Main</mainClass> <!-- Замените com.example.MainClass на путь к Вашему основному классу -->
+		        <mainClass>varseven_laba2.Main</mainClass> <!-- Замените com.example.MainClass на путь к Вашему основному классу -->
 		      </manifest>
 		    </archive>
 		  </configuration>
