@@ -13,7 +13,8 @@ public class ArrayCalculator {
 	            min = array[i];
 	        }
 	    }
+	    int element = (max - min);
 	    
-	    return max - min;
+	    return element;
 	}
 }
