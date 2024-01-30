@@ -1,2 +1,3 @@
 Varseven project
-priject converted to maven
+
+project converted to maven
